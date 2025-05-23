@@ -1,0 +1,188 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.intro {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e8f5e9;
+}
+
+.carrusel {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.carrusel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.evento {
+    background: #f0f0f0;
+    padding: 15px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.evento img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+/* Tabla de eventos */
+.listado-eventos table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.listado-eventos th,
+.listado-eventos td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.listado-eventos th {
+    background-color: #2e7d32;
+    color: white;
+}
+
+/* Detalle del evento */
+.detalle-evento {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.detalle-evento .evento-imagen {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.detalle-evento button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detalle-evento button.cancelar {
+    background-color: #c62828;
+}
+.carrusel {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.carrusel h2 {
+    margin-bottom: 20px;
+}
+
+.carrusel-contenedor {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-imagenes img {
+    width: 100%;
+    flex-shrink: 0;
+    display: none;
+}
+
+.carrusel-imagenes img.activo {
+    display: block;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carrusel-btn.izquierda {
+    left: 10px;
+}
+
+.carrusel-btn.derecha {
+    right: 10px;
+}
