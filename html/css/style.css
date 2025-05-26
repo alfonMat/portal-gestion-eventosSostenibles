@@ -44,7 +44,7 @@ nav ul li a {
 .intro {
     padding: 40px 20px;
     text-align: center;
-    background-color: #e8f5e9;
+    background-color: #c9f3f6;
 }
 
 .carrusel {
@@ -153,16 +153,23 @@ footer {
 .carrusel-imagenes {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    position: relative;
+    height: 400px; /* Ajusta según el tamaño de tus imágenes */
 }
 
 .carrusel-imagenes img {
     width: 100%;
     flex-shrink: 0;
-    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .carrusel-imagenes img.activo {
-    display: block;
+    opacity: 1;
+    z-index: 1;
 }
 
 .carrusel-btn {
@@ -185,4 +192,11 @@ footer {
 
 .carrusel-btn.derecha {
     right: 10px;
+}
+
+#texto-evento{
+    font-size: 18px;
+    color: #000000;
+    margin-top: 10px;
+    font-weight: bold;
 }

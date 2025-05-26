@@ -10,14 +10,25 @@ const textos = [
     "Jornada de Limpieza de Playa"
 ];
 
+//Cada 3 segundos cambia la imagen
+setInterval(() => {
+    indice = (indice + 1) % imagenes.length;
+    mostrarImagen(indice);
+    }, 3000
+);
+
 function mostrarImagen(indice) {
     imagenes.forEach((img, i) => {
         img.classList.remove('activo');
         if (i === indice) {
             img.classList.add('activo');
-            textoEvento.textContent = textos[i]; // Actualiza el texto
         }
     });
+    // Añade la clase 'activo' con un pequeño retardo para activar la transición
+    setTimeout(() => {
+        imagenes[indice].classList.add('activo');
+        textoEvento.textContent = textos[indice]; // Actualiza el texto
+    }, 20);
 }
 
 btnDerecha.addEventListener('click', () => {
