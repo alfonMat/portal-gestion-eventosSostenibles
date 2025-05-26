@@ -1,31 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const imagenes = document.querySelectorAll(".carrusel-imagenes img");
-    const btnIzquierda = document.querySelector(".carrusel-btn.izquierda");
-    const btnDerecha = document.querySelector(".carrusel-btn.derecha");
-    let indice = 0;
+const imagenes = document.querySelectorAll('.carrusel-imagenes img');
+const textoEvento = document.getElementById('texto-evento');
+const btnIzquierda = document.querySelector('.carrusel-btn.izquierda');
+const btnDerecha = document.querySelector('.carrusel-btn.derecha');
+let indice = 0;
 
-    const mostrarImagen = (i) => {
-        imagenes.forEach((img, index) => {
-            img.classList.remove("activo");
-            if (index === i) {
-                img.classList.add("activo");
-            }
-        });
-    };
+const textos = [
+    "Taller de Reciclaje Creativo",
+    "Conferencia de Energías Renovables",
+    "Jornada de Limpieza de Playa"
+];
 
-    btnIzquierda.addEventListener("click", () => {
-        indice = (indice - 1 + imagenes.length) % imagenes.length;
-        mostrarImagen(indice);
+function mostrarImagen(indice) {
+    imagenes.forEach((img, i) => {
+        img.classList.remove('activo');
+        if (i === indice) {
+            img.classList.add('activo');
+            textoEvento.textContent = textos[i]; // Actualiza el texto
+        }
     });
+}
 
-    btnDerecha.addEventListener("click", () => {
-        indice = (indice + 1) % imagenes.length;
-        mostrarImagen(indice);
-    });
-
-    // Rotación automática
-    setInterval(() => {
-        indice = (indice + 1) % imagenes.length;
-        mostrarImagen(indice);
-    }, 5000);
+btnDerecha.addEventListener('click', () => {
+    indice = (indice + 1) % imagenes.length;
+    mostrarImagen(indice);
 });
+
+btnIzquierda.addEventListener('click', () => {
+    indice = (indice - 1 + imagenes.length) % imagenes.length;
+    mostrarImagen(indice);
+});
+
+// Inicializa el carrusel
+mostrarImagen(indice);
