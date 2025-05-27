@@ -48,9 +48,11 @@ nav ul li a {
 }
 
 .carrusel {
-    padding: 30px 20px;
-    background-color: #ffffff;
     text-align: center;
+    margin: 30px auto;
+    padding: 30px 20px;
+    background: #b2dfdb; 
+    border-radius: 16px;
 }
 
 .carrusel-container {
@@ -65,7 +67,6 @@ nav ul li a {
     padding: 15px;
     width: 280px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .evento img {
@@ -134,6 +135,10 @@ footer {
 .carrusel {
     text-align: center;
     margin: 30px auto;
+    padding: 30px 20px;
+    background: #b2dfdb; /* Color sólido, sin degradado */
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
 }
 
 .carrusel h2 {

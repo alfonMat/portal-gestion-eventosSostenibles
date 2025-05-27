@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+    <head>
     <meta charset="UTF-8">
     <title>Portal de Eventos Sostenibles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,10 @@
 <body>
 
     <header>
+        <!-- Logo de la empresa -->
         <img src="images/logoIndra.jpg" class="logo">
         <h1>Eventos Sostenibles</h1>
+        <!-- Menú de navegación -->
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -20,27 +22,31 @@
     </header>
 
     <main>
+        <!-- Sección introductoria -->
         <section class="intro">
-            <h2>Bienvenido al Portal de Eventos Sostenibles</h2>
-            <p>Descubre conferencias, talleres y actividades para un futuro más verde.</p>
-        </section>
-
         <!-- Carrusel de eventos actuales -->
         <section class="carrusel">
             <h2>Eventos Actuales</h2>
             <div class="carrusel-contenedor">
+                <!-- Botón para ir a la imagen anterior -->
                 <button class="carrusel-btn izquierda">&#10094;</button>
 
+                <!-- Contenedor de imágenes del carrusel -->
                 <div class="carrusel-imagenes">
+                    <!-- Imagen 1: Taller de Reciclaje Creativo -->
                     <img src="images/evento1.jpg" alt="Taller de Reciclaje Creativo" class="activo">
+                    <!-- Imagen 2: Conferencia de Energías Renovables -->
                     <img src="images/evento2.jpg" alt="Conferencia de Energías Renovables">
+                    <!-- Imagen 3: Jornada de Limpieza de Playa -->
                     <img src="images/evento3.jpg" alt="Jornada de Limpieza de Playa">
                 </div>
 
+                <!-- Botón para ir a la imagen siguiente -->
                 <button class="carrusel-btn derecha">&#10095;</button>
             </div>
+            <!-- Texto de descripción del evento actual del carrusel -->
             <div class="carrusel-texto">
-                <p id="texto-evento"></p>
+                <p id="texto-evento"></p>   
             </div>
         </section>
 
@@ -49,7 +55,6 @@
     <footer>
         <p>&copy; 2025 Portal de Eventos Sostenibles</p>
     </footer>
-
     <script src="js/carrusel.js"></script>
 
 </body>

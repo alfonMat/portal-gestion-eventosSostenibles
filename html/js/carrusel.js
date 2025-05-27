@@ -14,7 +14,7 @@ const textos = [
 setInterval(() => {
     indice = (indice + 1) % imagenes.length;
     mostrarImagen(indice);
-    }, 3000
+    }, 5000
 );
 
 function mostrarImagen(indice) {
