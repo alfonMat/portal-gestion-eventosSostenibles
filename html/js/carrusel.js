@@ -7,39 +7,52 @@ let indice = 0;
 const textos = [
     "Taller de Reciclaje Creativo",
     "Conferencia de Energías Renovables",
-    "Jornada de Limpieza de Playa"
+    "Jornada de Limpieza de Playa",
 ];
 
-//Cada 3 segundos cambia la imagen
-setInterval(() => {
-    indice = (indice + 1) % imagenes.length;
-    mostrarImagen(indice);
-    }, 5000
-);
-
+// Solo funciona para 3 imágenes
 function mostrarImagen(indice) {
     imagenes.forEach((img, i) => {
-        img.classList.remove('activo');
-        if (i === indice) {
-            img.classList.add('activo');
-        }
+        img.classList.remove('activo', 'anterior', 'siguiente');
     });
-    // Añade la clase 'activo' con un pequeño retardo para activar la transición
-    setTimeout(() => {
-        imagenes[indice].classList.add('activo');
-        textoEvento.textContent = textos[indice]; // Actualiza el texto
-    }, 20);
+    const total = 3;
+    const anterior = (indice - 1 + total) % total;
+    const siguiente = (indice + 1) % total;
+
+    imagenes[indice].classList.add('activo');
+    imagenes[anterior].classList.add('anterior');
+    imagenes[siguiente].classList.add('siguiente');
+
+    if (textoEvento && textos[indice]) {
+        textoEvento.textContent = textos[indice];
+    }
 }
-
-btnDerecha.addEventListener('click', () => {
-    indice = (indice + 1) % imagenes.length;
-    mostrarImagen(indice);
-});
-
-btnIzquierda.addEventListener('click', () => {
-    indice = (indice - 1 + imagenes.length) % imagenes.length;
-    mostrarImagen(indice);
-});
 
 // Inicializa el carrusel
 mostrarImagen(indice);
+
+// Intervalo automático solo para 3 imágenes
+let intervalo = setInterval(() => {
+    indice = (indice + 1) % 3;
+    mostrarImagen(indice);
+}, 3000);
+
+function reiniciarIntervalo() {
+    clearInterval(intervalo);
+    intervalo = setInterval(() => {
+        indice = (indice + 1) % 3;
+        mostrarImagen(indice);
+    }, 3000);
+}
+
+btnDerecha.addEventListener('click', () => {
+    indice = (indice + 1) % 3;
+    mostrarImagen(indice);
+    reiniciarIntervalo();
+});
+
+btnIzquierda.addEventListener('click', () => {
+    indice = (indice - 1 + 3) % 3;
+    mostrarImagen(indice);
+    reiniciarIntervalo();
+});
