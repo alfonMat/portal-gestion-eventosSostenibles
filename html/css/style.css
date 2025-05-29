@@ -76,16 +76,37 @@ nav ul li a {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Los botones estarán a los lados del carrusel */
 }
 
-/* Carrusel tipo "coverflow" mostrando las 3 imágenes, la central en primer plano */
+.carrusel-btn {
+    position: static;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    margin: 0 10px;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .carrusel-imagenes {
+    flex: 1 1 auto;
     position: relative;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Elimina flex-shrink de los hijos para evitar deformaciones */
 }
 
 .carrusel-imagenes img {
