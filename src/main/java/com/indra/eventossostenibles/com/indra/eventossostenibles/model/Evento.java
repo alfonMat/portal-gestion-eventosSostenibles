@@ -4,14 +4,16 @@ public class Evento {
     private String nombre;
     private String fecha;
     private String hora;
-    private String lugar;
+    private String categoria;
+    private String ubicacion;
     private String descripcion;
 
-    public Evento(String nombre, String fecha, String hora, String lugar, String descripcion) {
+    public Evento(String nombre, String fecha, String hora, String categoria, String ubicacion, String descripcion) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.hora = hora;
-        this.lugar = lugar;
+        this.categoria = categoria;
+        this.ubicacion = ubicacion;
         this.descripcion = descripcion;
     }
 
@@ -34,11 +36,11 @@ public class Evento {
         public void setHora(String hora) {
             this.hora = hora;
         }
-        public String getLugar() {
-            return lugar;
+        public String getUbicacion() {
+            return ubicacion;
         }
-        public void setLugar(String lugar) {
-            this.lugar = lugar;
+        public void setUbicacion(String ubicacion) {
+            this.ubicacion = ubicacion;
         }
         public String getDescripcion() {
             return descripcion;
@@ -46,33 +48,42 @@ public class Evento {
         public void setDescripcion(String descripcion) {
             this.descripcion = descripcion;
         }
+        public String getCategoria() {
+            return categoria;
+        }
+        public void setCategoria(String categoria) {
+            this.categoria = categoria;
+        }
 
     @Override
     public String toString() {
         return "Evento{" +
-                "nombre='" + nombre +
-                ", fecha='" + fecha +
-                ", hora='" + hora +
-                ", lugar='" + lugar +
-                ", descripcion='" + descripcion +
+                "nombre='" + nombre + '\'' +
+                ", fecha='" + fecha + '\'' +
+                ", hora='" + hora + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", ubicacion='" + ubicacion + '\'' +
+                ", descripcion='" + descripcion + '\'' +
                 '}';
     }
 
     public static Evento[] eventosPorDefecto() {
         Evento[] eventos = new Evento[2];
         eventos[0] = new Evento(
-            "Día del Medio Ambiente",
-            "2024-06-05",
+            "Recogida de Residuos",
+            "2025-06-05",
             "10:00",
-            "Auditorio Central",
-            "Jornada de concienciación ambiental"
+            "Evento",
+            "Jornada de concienciación ambiental",
+            "Medio Ambiente"
         );
         eventos[1] = new Evento(
             "Reciclaje en tu Barrio",
-            "2024-07-12",
+            "2025-07-12",
             "17:00",
-            "Centro Comunitario",
-            "Taller práctico de reciclaje"
+            "Taller ",
+            "Taller práctico de reciclaje",
+            "Reciclaje"
         );
         return eventos;
     }
