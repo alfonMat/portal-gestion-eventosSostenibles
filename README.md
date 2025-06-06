@@ -8,3 +8,5 @@ lenguaje_de_marcas: Incluye una página web construida con HTML, CSS y JavaScrip
 programación: Se desarrolla una aplicación para la gestión de eventos, en la que los organizadores pueden crear nuevos eventos y los usuarios tienen la posibilidad de registrarse en ellos.
 
 sql: Se crea una base de datos basada en los requisitos del cliente. Se entrega el diagrama entidad-relación, el modelo relacional, las tablas con sus respectivas descripciones, un script para su instalación y la base de datos lista para ser importada en el servidor.
+
+![GraphGithub](https://github.com/user-attachments/assets/f1486d8c-2255-4cf1-9247-748642928d02)
