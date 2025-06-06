@@ -15,7 +15,7 @@ public class CoActualizarEvento {
     }
 
     public void ejecutar() {
-        scanner.nextLine(); 
+        scanner.nextLine();
         System.out.print("Nombre del evento a actualizar: ");
         String nombre = scanner.nextLine();
         int idx = -1;
@@ -34,14 +34,14 @@ public class CoActualizarEvento {
         System.out.print("Nueva fecha: ");
         String nuevaFecha = scanner.nextLine();
         System.out.print("Nueva hora: ");
-        String nuevaCategoria = scanner.nextLine();
-        System.out.print("Nueva categoría: ");
         String nuevaHora = scanner.nextLine();
+        System.out.print("Nueva categoría: ");
+        String nuevaCategoria = scanner.nextLine();
         System.out.print("Nueva ubicación: ");
         String nuevaUbicacion = scanner.nextLine();
         System.out.print("Nueva descripción: ");
         String nuevaDescripcion = scanner.nextLine();
-        eventos[idx] = new Evento(nuevoNombre, nuevaFecha, nuevaHora, nuevaCategoria, nuevaUbicacion, nuevaDescripcion );
+        eventos[idx] = new Evento(nuevoNombre, nuevaFecha, nuevaHora, nuevaCategoria, nuevaUbicacion, nuevaDescripcion);
         System.out.println("Evento actualizado correctamente.");
     }
 }

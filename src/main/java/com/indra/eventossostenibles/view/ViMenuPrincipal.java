@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ViMenuPrincipal {
 
-    public int menuPrincipal () {
+    public int menuPrincipal() {
         System.out.println("---------------------------------");
         System.out.println("EVENTOS SOSTENIBLES");
         System.out.println("Bienvenido a la aplicación de eventos sostenibles");
@@ -13,10 +13,10 @@ public class ViMenuPrincipal {
         System.out.println("1.- Usuario");
         System.out.println("2.- Organizador");
         System.out.println("3.- Salir");
-                
+
         Scanner scanner = new Scanner(System.in);
         int opcion = scanner.nextInt();
-        
+
         return opcion;
     }
 
